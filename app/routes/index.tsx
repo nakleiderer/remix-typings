@@ -1,30 +1,25 @@
+import { Link } from "@remix-run/react";
+
 export default function Index() {
   return (
     <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
-      <h1>Welcome to Remix</h1>
+      <h1>Welcome to Remix Typing Demo</h1>
+      <p>
+        Look in{" "}
+        <pre style={{ display: "inline" }}>/app/routes/inferred.tsx</pre> for an
+        example of inferred types.
+      </p>
+      <p>
+        Look in{" "}
+        <pre style={{ display: "inline" }}>/app/routes/explicit.tsx</pre> for an
+        example of explicit types.
+      </p>
       <ul>
         <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/blog"
-            rel="noreferrer"
-          >
-            15m Quickstart Blog Tutorial
-          </a>
+          <Link to="/inferred">Inferred Types</Link>
         </li>
         <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/jokes"
-            rel="noreferrer"
-          >
-            Deep Dive Jokes App Tutorial
-          </a>
-        </li>
-        <li>
-          <a target="_blank" href="https://remix.run/docs" rel="noreferrer">
-            Remix Docs
-          </a>
+          <Link to="/explicit">Explicit Types </Link>
         </li>
       </ul>
     </div>
